@@ -1,14 +1,11 @@
 using System.Text.Json;
 using Pokedex.Models;
-
 namespace Pokedex.Services;
-
 public class PokeService : IPokeService
 {
     private readonly IHttpContextAccessor _session;
     private readonly string pokemonFile = @"Data\pokemons.json";
     private readonly string tiposFile = @"Data\tipos.json";
-
     public PokeService(IHttpContextAccessor session)
     {
         _session = session;
